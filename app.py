@@ -148,6 +148,7 @@ def change_pass():
         res.password = newpassword
         setattr(res, 'password', newpassword)
         db.session.commit()
+        print("Done")
         return make_response({"message": "password changed "}) 
     else:
         return make_response({"message": "Invalid password "})
